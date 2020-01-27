@@ -12,7 +12,7 @@ public class SparkJavaHibernateExample {
 
 	public static void startService() {
 
-		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		final SessionFactory sf = new Configuration().configure().buildSessionFactory();
 
 		staticFiles.location("/public");
 

@@ -9,8 +9,12 @@
         <property name="hibernate.connection.username">sam</property>
         <property name="hibernate.connection.password">sam</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/luka</property>
-
         <property name="show_sql">true</property>
+
+        <property name="hibernate.hikari.connectionTimeout">20000</property>
+        <property name="hibernate.hikari.minimumIdle">10</property>
+        <property name="hibernate.hikari.maximumPoolSize">20</property>
+        <property name="hibernate.hikari.idleTimeout">30000</property>
 
         <!-- DB schema will be updated if needed -->
         <property name="hbm2ddl.auto">update</property>
