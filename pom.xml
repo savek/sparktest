@@ -11,11 +11,13 @@
     <properties>
         <hibernate-version>5.4.4.Final</hibernate-version>
         <postgresql-version>42.2.9</postgresql-version>
+        <log4j-version>1.7.25</log4j-version>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
 
     <dependencies>
+        <!--Spark-->
         <dependency>
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>
@@ -57,12 +59,19 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
+            <version>${log4j-version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.25</version>
+            <version>${log4j-version}</version>
+        </dependency>
+
+        <!--Templates-->
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-template-mustache</artifactId>
+            <version>2.7.1</version>
         </dependency>
 
     </dependencies>

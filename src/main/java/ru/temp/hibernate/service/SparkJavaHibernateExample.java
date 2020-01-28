@@ -8,13 +8,11 @@ import javax.persistence.EntityManager;
 import javax.servlet.MultipartConfigElement;
 import java.util.List;
 
-public class SparkJavaHibernateExample {
+public class SparkJavaHibernateExample implements SparkService {
 
-	public static void startService() {
+	public void startService() {
 
 		final SessionFactory sf = new Configuration().configure().buildSessionFactory();
-
-		staticFiles.location("/public");
 
 		post("/api/task", (req, res) -> {
 
