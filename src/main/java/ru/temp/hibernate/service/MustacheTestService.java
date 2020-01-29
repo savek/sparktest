@@ -11,6 +11,7 @@ import static spark.Spark.get;
 
 /**
  * Тестовый класс с шаблоном mustache
+ * http://localhost:4567/hellow
  * */
 public class MustacheTestService implements SparkService {
 	public void startService() {
@@ -19,7 +20,7 @@ public class MustacheTestService implements SparkService {
 
 			model.put("title", "Mustache test");
 			model.put("createdOn", new Date().toString());
-			model.put("text", "Какой-то текст");
+			model.put("text", "Опробовать фримэйкер и таймлиф");
 
 			return new MustacheTemplateEngine().render(
 					new ModelAndView(model, "hellow.mustache")
